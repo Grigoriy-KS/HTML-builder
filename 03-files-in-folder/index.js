@@ -1,8 +1,6 @@
 const { stdout, stderr } = process;
-const { error } = require("console");
 const fs = require("fs");
 const path = require("path");
-const fsPromises = fs.promises;
 const folderPath = path.join(__dirname, "secret-folder");
 
 fs.access(folderPath, fs.constants.R_OK | fs.constants.W_OK, (error) => {
